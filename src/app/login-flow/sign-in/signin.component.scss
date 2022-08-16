@@ -1,0 +1,104 @@
+@import '../../../theme';
+.aio_signin{
+    height: 100vh;
+}
+.logo{
+    align-self: center;
+    @extend .justify_ce;
+    margin: 0px 0 20px;
+}
+.formarea{
+    width: 600px;
+    padding: 50px;
+    background: $lightbluebgforlog;
+    border-radius: 12px;
+    box-shadow: 3px 6px 16px #0000001F;
+    text-align: center;
+}
+.formfields{
+    padding-bottom: 20px;
+    .mat-form-field{
+        display: block;
+    }
+}
+::ng-deep{
+    .mat-form-field-type-mat-input{
+        /*for floating label input*/
+        &.mog3_floatmatinput{
+            &.mat-form-field-appearance-outline .mat-form-field-outline-start,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-end,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-gap{
+              background: #fff;
+              color: #979797;
+            }
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+              border-width: 1px;
+              color: #979797;
+              background: #fff;
+            }
+            .mat-form-field-infix{
+              border-top: none;
+              padding: 23px 0px 20px;
+            }
+            .mat-select-placeholder{
+              font-family: $fontFamily;
+              font-size: 11px;
+            }
+            .mat-input-element{
+                font-size: 12px;
+                font-family: $fontFamily;
+                height: 16px;
+              }
+            .mat-form-field-wrapper{
+              padding-bottom: 5px;
+            }
+            .mat-form-field-label{
+                font-size: 14px;
+                line-height: 18px;
+                font-family: $fontFamily;
+                top: 2.64375em;
+            }
+            &.mat-form-field-should-float{
+                .mat-form-field-label{
+                    top: 2.74375em;
+                }
+            }
+        }
+    }
+}
+
+
+.mog3_flat_btn{
+    height: 40px;
+    line-height: 40px;
+    border-radius: $commonRadius;
+    padding: 0 20px;
+    font-size: 12px;
+    border: none;
+    &:disabled{
+        background: #A2A2A2;
+        color: #fff;
+    }
+    i{
+        margin-right: 5px;
+        font-size: 17px
+    }
+}
+.mog3_primary_flat_btn{
+    @extend .mog3_flat_btn;
+    background: $brandcolor;
+    color: #fff;
+    &:disabled{
+        background: #A2A2A2;
+        color: #fff;
+    }
+}
+.signinbutton{
+    width: 90%;
+    height: 50px;
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: $fontBold;
+}

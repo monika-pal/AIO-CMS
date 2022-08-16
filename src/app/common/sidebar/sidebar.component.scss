@@ -1,0 +1,32 @@
+.mog3_header{
+    padding: 0 20px;
+    height: 52px;
+}
+.mog3_hleft{
+    align-items: center;
+}
+::ng-deep{
+    .mat-menu-panel{
+        &.mog3_mainmenu{
+            margin-top: -36px;
+            max-width:730px;
+            min-width: 730px;
+            min-height: 485px;
+        }
+    }
+    
+}
+.mog3_logo{
+    margin-left: 7px;
+}
+.mog3_rightmenu{
+    display: flex;
+    align-items: center;
+    li{
+        margin-left: 10px;
+        cursor: pointer;
+        span{
+            display: block;
+        }
+    }
+}
