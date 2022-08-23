@@ -1,32 +1,45 @@
-.mog3_header{
-    padding: 0 20px;
-    height: 52px;
+@import 'remixicon/fonts/remixicon.css';
+.sidebar-wrapper {
+   background-color: #0779FF;
+   height: auto;
 }
-.mog3_hleft{
-    align-items: center;
-}
-::ng-deep{
-    .mat-menu-panel{
-        &.mog3_mainmenu{
-            margin-top: -36px;
-            max-width:730px;
-            min-width: 730px;
-            min-height: 485px;
-        }
+.sidebar-menu {
+    ul {
+        list-style-type: none;
+        padding: 0;
     }
-    
-}
-.mog3_logo{
-    margin-left: 7px;
-}
-.mog3_rightmenu{
-    display: flex;
-    align-items: center;
-    li{
-        margin-left: 10px;
-        cursor: pointer;
-        span{
-            display: block;
+    .sidebar-dropdown {
+        padding: 10px 0;
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 500;
+            span {
+                font-weight: bold;
+            }
+            i {
+               font-size: 24px;
+                color: #fff;
+                margin-right: 10px;
+            }
+            img {
+                margin-right: 10px; 
+            }
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-submenu {
+            padding: 10px 0;
+            ul {
+                padding: 0;
+                li {
+                    padding: 10px 0 10px 40px;  
+                }
+            }
         }
     }
 }

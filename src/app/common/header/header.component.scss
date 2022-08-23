@@ -1,9 +1,21 @@
+
 .mog3_header{
     padding: 0 20px;
-    height: 52px;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
 }
 .mog3_hleft{
     align-items: center;
+    i {
+        font-size: 20px;
+        color: #D8232D;
+        background-color: #fff;
+    }
+    button {
+        background-color: #fff;
+    }
 }
 ::ng-deep{
     .mat-menu-panel{
@@ -24,9 +36,20 @@
     align-items: center;
     li{
         margin-left: 10px;
+        list-style-type: none;
         cursor: pointer;
+        button {
+            i {
+                font-size: 20px;
+                color: #0B78FC;
+            }
+        }
         span{
             display: block;
+            img {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }

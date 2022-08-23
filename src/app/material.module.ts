@@ -20,6 +20,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatListModule } from '@angular/material/list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 
 
@@ -45,7 +47,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatTooltipModule,
         MatListModule,
         MatDatepickerModule,
-        MatTabsModule
+        MatTabsModule,
+        MatSidenavModule
         
     ],
     exports: [
@@ -69,7 +72,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatTooltipModule,
         MatListModule,
         MatDatepickerModule,
-        MatTabsModule
+        MatTabsModule,
+        MatSidenavModule
         
     ]
 })

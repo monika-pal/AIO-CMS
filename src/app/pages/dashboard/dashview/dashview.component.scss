@@ -1,0 +1,59 @@
+.dashboard {
+    margin: 40px 0 40px 20px;
+    background-color: #F5FCFF;
+    .container {
+        h1 {
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: bold;
+            color: #3A3A3A;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 34px;
+            font-weight: 500;
+            color: #3A3A3A;
+        }
+    }
+}
+
+.card-box {
+    display: flex;
+}
+
+::ng-deep {
+    .card {
+       width: 240px !important;
+       margin-left: 20px;
+      }
+      .mat-card-image {
+        width: 100px !important;
+        margin-bottom: 60px !important;
+      }
+      .mat-card {
+        padding: 30px !important;
+        box-shadow: 0px 3px 16px #455B631A !important;
+        border: 1px solid #EFEFF4 !important;
+        border-radius: 8px !important;
+        opacity: 1;
+      }
+
+      .content {
+        display: flex;
+        p {
+            font-size: 23px;
+            line-height: 23px;
+            font-weight: bold;
+            span {
+                font-size: 16px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+           
+        }
+        .last-p {
+            margin-left: 36px !important;
+        }
+      }
+}

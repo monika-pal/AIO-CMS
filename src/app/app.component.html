@@ -1,1 +1,23 @@
-<router-outlet></router-outlet>
+
+  <!-- <mat-drawer-container [hasBackdrop]="false" class="example-container" autosize>
+    <mat-drawer #drawer mode="side"></mat-drawer>
+  <div class="mog3_body">
+<app-header></app-header>
+<div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+</div>
+</div>
+</mat-drawer-container> -->
+
+<mat-drawer-container [hasBackdrop]="false"  class="e" autosize>   
+    <div class="mog3_body">
+        <app-header></app-header>
+        <button (click)="drawer.toggle()" class="mog3_iconbtn noborder" ><i class="ri-menu-2-fill"></i></button> 
+        <div class="mat-drawer-body">
+          <mat-drawer #drawer mode="side" opened style="width:240px"><app-sidebar></app-sidebar></mat-drawer>
+          <div class="" style="width: calc(100% - 240px);">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+    </div>
+  </mat-drawer-container>

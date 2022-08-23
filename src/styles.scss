@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import 'remixicon/fonts/remixicon.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import './theme';
+
 html, body { height: 100%; font-family: $fontFamily; }
 body { margin: 0;padding: 0; background: #fff;}
 div,h1,h2,h3,h4,h5,span,p,label,input,button{
     font-family: $fontFamily; 
+    font-family: 'Poppins', sans-serif;
+
 }
