@@ -1,12 +1,4 @@
-// @import '../../../theme.scss';
-.mog3_msnsearchtable{
-    margin-top: 15px;
-    border-radius: 4px;
-    height: 400px;
-    width: 100%;
-    max-width: 100%;
-    margin-left: 200px;
-    // overflow: auto;
+
 
 ::ng-deep{
     .mat-table{
@@ -24,13 +16,13 @@
                 background:#D1F0FF;
                 padding: 0 10px;
                 font-size: 14px;
-                color: #3c3c3c;
                 font-weight: bold;
-                &.cdk-column-plantname{
+                color: #272D3B;
+                &.cdk-column-subTitle{
                     width: 15%;
                     max-width: 15%;
                 }
-                &.cdk-column-creationdate{
+                &.cdk-column-date{
                     i{
                         font-size: 18px;
                         display: inline-block;
@@ -46,9 +38,9 @@
         tbody{
             .mat-cell{
                 padding:10px;
-                font-size: 11px;
-                color: #3c3c3c;  
-                &.cdk-column-sano{
+                font-size: 12px;
+                color: #272D3B;  
+                &.cdk-column-title{
                     span{
                         font-weight: 600;
                     }
@@ -63,10 +55,10 @@
                         font-size: 20px;
                     }
                 }
-                &.cdk-column-creationdate{
+                &.cdk-column-date{
                     font-weight: 600;
                     span{
-                        font-weight: 10px;
+                        font-weight: 12px;
                         display: block;
                     }
                 }
@@ -77,84 +69,177 @@
     }
 }    
    
+
+
+.sec-btn {
+    margin: 20px;
+    .mog3_primary_flat_btn{
+        height: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        padding: 0 20px;
+        font-size: 12px;
+        border:1px solid #D9232D;
+        color: #D9232D;
+        background-color: #F8D3D5;
+        &:disabled{
+            background: #A2A2A2;
+            color: #fff;
+        }
+        i{
+            margin-right: 5px;
+            font-size: 17px
+        }
+    }
+
+    .mog3_white_flat_btn {
+        height: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        padding: 0 20px;
+        font-size: 12px;
+        border:1px solid #E7E7E8;
+        color: #3C3C3C;
+        background-color: #fff;
+        margin-left: 10px;
+        &:disabled{
+            background: #A2A2A2;
+            color: #fff;
+        }
+        i{
+            margin-right: 5px;
+            font-size: 17px
+        }
+    }
 }
 
+.head-table {
+    background-color: #fff;
 
-
-.mog3_msnsearchtable_sticky{
-    margin-top: 15px;
-    border-radius: 4px;
-    height: 400px;
-    width: 100%;
-    max-width: 100%;
-    overflow: auto;
+}
+.tab-header {
+    padding: 20px 0;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+.mog3_grey_flat_btn {
+    background-color: #3C3C3C;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 20px;
+    height: 35px;
+    width: 78px;
+}
+    
+}
 
 ::ng-deep{
-    .mat-table{
-        // min-width: 100%;
-        width: 100%;
-        max-width: 100%;
-       
-        th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
-            border-bottom: none;
-        }
-        thead{
-            height: 38px !important;
-            border-radius: 4px;
-            .mat-header-cell{                
-                background:#F2F2F2;
-                padding: 0 10px;
-                font-size: 11px;
-                color:#3c3c3c;
-                &.cdk-column-plantname{
-                    width: 15%;
-                    max-width: 15%;
-                }
-                &.cdk-column-creationdate{
-                    i{
-                        font-size: 18px;
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                    span{
-                        display: inline-block;
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-        tbody{
-            .mat-cell{
-                padding:10px;
-                font-size: 11px;
-                color:#3c3c3c;  
-                &.cdk-column-sano{
-                    span{
-                        font-weight: 600;
-                    }
-                }    
-                &.cdk-column-action{
-                    span{
-                        font-weight: 500;
-                    }
-                }  
-                &.cdk-column-more{
-                    i{
-                        font-size: 20px;
-                    }
-                }
-                &.cdk-column-creationdate{
-                    font-weight: 600;
-                    span{
-                        font-weight: 10px;
-                        display: block;
-                    }
-                }
+    .select-box {
+        display: flex;
+        align-items: center;
+        .mat-form-field-appearance-outline .mat-form-field-flex {
+            margin-top: 0 !important;
+          }
+        .mat-form-field-type-mat-select{
+            &.mog3-matselect{
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+                border: 1px solid #BFBFBF;
                
+              }
+              &.mat-form-field-appearance-outline .mat-form-field-outline-start{
+                border-radius: 4px 0 0 4px;
+                background: #fff;
+              }
+              &.mat-form-field-appearance-outline .mat-form-field-outline-end{
+                border-radius: 0 4px 4px 0;
+                background: #fff;
+              }
+              .mat-form-field-infix{
+                border: 1px solid #BFBFBF;
+                padding: 13px 0px 10px;
+              }
+              .mat-select-placeholder{
+                font-family: 12px;
+                font-size: 11px;
+              }
+              &.mat-form-field-appearance-outline .mat-select-arrow-wrapper{
+                transform: translateY(0);
+              }
+              .mat-form-field-wrapper{
+                padding-bottom: 0px;
+                margin: 0;
+              }
             }
+            &.withoutoutline{
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+              &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+                border-width: 0px;
+              }
+              .mat-form-field-outline{
+                color: transparent;
+              }
+              .mat-form-field-infix{
+                width: 100px;
+                padding: 10px 7px 8px;
+                border-radius: 4px;
+              }
+              .mat-select-placeholder{
+                font-family: 12px;
+                font-size: 11px;
+                font-weight: 500;
+                color: #000;
+              }
+              .mat-select-value-text{
+                font-weight: 500;
+                font-size: 11px;
+              }
+              &.mat-form-field-appearance-outline .mat-select-arrow-wrapper{
+                transform: translateY(0);
+              }
             
+              .mat-form-field-wrapper{
+                padding-bottom: 0px;
+                margin: 0;
+              }
+        
+            }
+    }  
+      }
+// search Input
+.search-form {
+    .inner-form {
+        position: relative;
+        .ri-search-line {
+            position: absolute;
+            top: 8px;
+            left: 10px;
         }
+        input {
+            padding: 8px 10px 8px 30px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #BFBFBF;
+            border-radius: 4px;
+            opacity: 1;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            font-size: 12px;
+        }
+        button {
+            padding: 8px 10px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #BFBFBF;
+            border-radius: 4px;
+            opacity: 1;
+            border-left: hidden;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            color: #D9232D;
+            font-size: 12px;
+        }
+       
     }
-}    
-   
+}
 }

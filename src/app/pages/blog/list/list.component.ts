@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {MatTableModule} from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+
 
 @Component({
   selector: 'app-list',
@@ -8,20 +10,18 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
-  displayedColumns = ['select','sano', 'plantname', 'plantid','creationdate','validtill','productcount','action','more'];
+  
+  displayedColumns = ['select','title', 'subTitle', 'category','tag','date',];
 
   dataSource = new MatTableDataSource<InvoiceListItems>(ELEMENT_DATA);
   selection = new SelectionModel<InvoiceListItems>(true, []);
 
-  /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
     if (this.isAllSelected()) {
       this.selection.clear();
@@ -31,37 +31,38 @@ export class ListComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: InvoiceListItems): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.sano + 1}`;
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.title + 1}`;
   }
-
+ 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
+  
 export interface InvoiceListItems {
-  sano:number;
-  plantname:string;
-  plantid:number;
-  crdate:string;
-  crtime:string;
-  validtill:string;
-  prodcount:number;
+  title:string;
+  subTitle:string;
+  category:string;
+  tag:string;
+  date:string;
+
+ 
   }
   
   const ELEMENT_DATA: InvoiceListItems[] = [
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
-   {sano:130097862100000093,plantname:'Mogli Labs (India) Private Limited - Delhi', plantid:9786, crdate:'14-01-2021',crtime:'04:15:26',validtill:'14-01-2021',prodcount:1},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
+   {title:'Moglix Enables Automotive OEM to Unlock 2% Cost Savings in Indirect',subTitle:'Automotive last 5 year', category:'SUPPLY CHAIN', tag:'MRO',date:'2022/07/28'},
   ];

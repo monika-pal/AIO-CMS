@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from '../common/header/header.component';
 
+
 const routes: Routes = [
   {
   
@@ -16,6 +17,7 @@ const routes: Routes = [
     path:'blog',
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   },
+
 ];
 
 @NgModule({

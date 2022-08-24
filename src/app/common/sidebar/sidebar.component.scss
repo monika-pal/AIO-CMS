@@ -43,3 +43,9 @@
         }
     }
 }
+
+::ng-deep {
+    .sidebar-content {
+        padding: 0 20px;
+    }
+}
