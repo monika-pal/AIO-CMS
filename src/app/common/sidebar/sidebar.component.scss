@@ -33,6 +33,11 @@
             align-items: center;
         }
         .sidebar-submenu {
+            .sub-menu{
+                li:last-child {
+                    padding-left: 0;
+                }
+            }
             padding: 10px 0;
             ul {
                 padding: 0;

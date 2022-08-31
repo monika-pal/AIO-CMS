@@ -3,18 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
-import { CreateComponent } from './create/create.component';
+import { MaterialModule } from '../../material.module';
+import { AddnewComponent } from './create/addnew.component';
+
+
 
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    CreateComponent
+   AddnewComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    MaterialModule,
+  ],
+  exports:[
+    AddnewComponent
   ]
 })
 export class UserModule { }
