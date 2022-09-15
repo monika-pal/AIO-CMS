@@ -1,1 +1,184 @@
-<p>create works!</p>
+<section class="create-sec">
+    <div class="edit-text-sec">
+        <ul class="icon-edit">
+            <li>
+                <span><i class="ri-arrow-go-back-line"></i></span>
+                <p>Undo</p>
+            </li>
+            <li>
+                <span><i class="ri-arrow-go-forward-line"></i></span>
+                <p>Redo</p>
+            </li>
+            <li>
+                <span><i class="ri-paragraph"></i></span>
+                <p>Paragraph</p>
+            </li>
+            <li>
+                <span><i class="ri-double-quotes-l"></i></span>
+                <p>Quote</p>
+            </li>
+            <li>
+                <span><i class="ri-image-fill"></i></span>
+                <p>Image</p>
+            </li>
+            <li>
+                <span><i class="ri-heading"></i></span>
+                <p>Heading</p>
+            </li>
+            <li>
+                <span><i class="ri-image-add-fill"></i></span>
+                <p>Cover</p>
+            </li>
+            <li>
+                <span><i class="ri-gallery-fill"></i></span>
+                <p>Gallery</p>
+            </li>
+            <li>
+                <span><i class="ri-list-check"></i></span>
+                <p>List</p>
+            </li>
+            <li>
+                <span><i class="ri-music-fill"></i></span>
+                <p>Audio</p>
+            </li>
+            <li>
+                <span><i class="ri-folder-line"></i></span>
+                <p>File</p>
+            </li>
+        </ul>
+    </div>
+        <div class="create-sec-btn">
+        <button mat-flat-button class="primary_btn">SAVE AS DRAFT</button>
+          <button mat-flat-button class="mog3_primary_flat_btn">PREVIEW</button>
+          <button mat-flat-button class="red_flat_btn">PUBLISH</button>
+         
+        </div>
+</section>
+<section class="form-input">
+    <div class="form-wrapper">
+        <div class="inner-form-box">
+            <div class="title-box">
+                <h3>Title</h3>
+                <form class="title-form">
+                    <textarea matInput id="w3review" name="w3review">Add Title</textarea>
+                  </form>
+            </div>
+            <div class="edit-sec">
+                <div class="edit-box">
+                    <angular-editor id="editor1" formControlName="htmlContent1">
+                        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+                          <ae-toolbar-set>
+                            <ae-button iconClass="fa fa-html5" title="Angular editor logo">
+                            </ae-button>
+                          </ae-toolbar-set>
+                        </ng-template>
+                      </angular-editor>
+                </div>
+            </div>
+            <div class="media-upload-sec">
+                  <div class="file-upload">
+                    <div class="image-upload-wrap">
+                      <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                      <div class="drag-text">
+                        <p><span><i class="ri-gallery-fill"></i></span>Gallery</p> 
+                        <p class="mt-15">Drag images, upload new ones or select files from your library.</p>
+                      </div>
+                      <div class="btn-upld">
+                        <button class="file-upload-btn" type="button">Upload</button>
+                        <button class="file-media-btn mr-10" type="button">Media Library</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    
+        <div class="tab-sec">
+            <mat-tab-group preserveContent>
+                <mat-tab label="Document">
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Status Visibility
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="content-text">
+                    <p>Publish On</p>
+                    <a>Immediately</a>
+                     </div>
+                     <div class="date-time">
+                        <div class="time-box">
+                            <div class="ngx-timepicker-field-example">
+                                <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
+                            </div>
+                           </div>
+                           <mat-form-field class="example-full-width" appearance="fill">
+                            <a (click)="picker.open()">
+                            <input matInput [matDatepicker]="picker" placeholder="Select Date"> 
+                            <mat-datepicker #picker></mat-datepicker>
+                           </a> 
+                            </mat-form-field>
+                     </div>
+                      </mat-expansion-panel>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                        (closed)="panelOpenState = false">
+                                <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Category List
+                                </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <div class="content-text">
+                                </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Add Tab
+                            </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="content-text">
+                            </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Featured Image
+                            </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="content-text">
+                            </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Excerpt
+                            </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="content-text">
+                            </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Subtitle
+                            </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="content-text">
+                            </div>
+                            </mat-expansion-panel>
+                      </mat-accordion>
+                </mat-tab>
+                <mat-tab label="Block">
+                  block
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</section>
+
+ 

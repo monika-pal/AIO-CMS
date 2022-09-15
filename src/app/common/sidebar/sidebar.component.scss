@@ -1,6 +1,5 @@
 @import 'remixicon/fonts/remixicon.css';
 .sidebar-wrapper {
-   background-color: #0779FF;
    height: auto;
 }
 .sidebar-menu {
@@ -12,7 +11,7 @@
         padding: 10px 0;
         a {
             text-decoration: none;
-            color: #fff;
+            color: #3C3C3C;
             font-size: 14px;
             line-height: 21px;
             font-weight: 500;
@@ -21,11 +20,8 @@
             }
             i {
                font-size: 24px;
-                color: #fff;
+                color: #3C3C3C;
                 margin-right: 10px;
-            }
-            img {
-                margin-right: 10px; 
             }
         }
         .icon {
@@ -33,24 +29,47 @@
             align-items: center;
         }
         .sidebar-submenu {
-            .sub-menu{
-                li:last-child {
-                    padding-left: 0;
-                }
-            }
             padding: 10px 0;
             ul {
                 padding: 0;
+                // background-color: #F5EBEC;
                 li {
                     padding: 10px 0 10px 40px;  
+                    a {
+                        text-decoration: none;
+                        color: #3C3C3C;
+                        font-size: 14px;
+                        line-height: 21px;
+                        font-weight: 500;
+                        span {
+                            font-weight: bold;
+                        }
+                        i {
+                           font-size: 24px;
+                            color: #3C3C3C;
+                            margin-right: 10px;
+                        }
+                    }
+                    
                 }
+
             }
         }
     }
 }
 
-::ng-deep {
-    .sidebar-content {
-        padding: 0 20px;
+.user{
+    a {
+        text-decoration: none;
+        color: #3C3C3C;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+        i {
+           font-size: 24px;
+            color: #3C3C3C;
+            margin-right: 10px;
+        }
     }
 }
+

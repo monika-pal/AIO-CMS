@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
 import { MaterialModule } from '../../material.module';
-import { AddnewComponent } from './create/addnew.component';
+import { AddnewComponent } from './create-addNew-dialog/addnew.component';
 
 
 

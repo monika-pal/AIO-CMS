@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-
+import { AddnewComponent } from 'src/app/pages/user/create-addNew-dialog/addnew.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list',
@@ -39,9 +40,15 @@ export class ListComponent implements OnInit {
   }
  
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(AddnewComponent, {
+      width: '455px',
+    });
   }
 
 }

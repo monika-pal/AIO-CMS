@@ -15,8 +15,8 @@ export class AddnewComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  toppings = new FormControl('');
+  Platform = new FormControl('');
 
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  PlatformList: string[] = ['All', 'Moglix', 'Moglix Business', 'Credlix'];
  
 }

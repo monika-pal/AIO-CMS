@@ -1,0 +1,26 @@
+<section>
+    <div class="add-user">
+        <h1>Add New User</h1>
+       <div class="form">
+        <input type="email" id="email" placeholder="Enter Email ID" name="email">
+       </div>
+       <div class="select-box">
+        <mat-form-field appearance="fill">
+            <mat-label>Select Platform</mat-label>
+            <mat-select multiple>
+              <mat-select-trigger>
+                {{Platform.value?.[0] || ''}}
+                <span *ngIf="(Platform.value?.length || 0) > 1" class="create-selection">
+                  (+{{(Platform.value?.length || 0) - 1}} {{Platform.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let Platform of PlatformList" [value]="Platform">{{Platform}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+       </div>
+       <div class="select-button">
+        <button class="cancel-btn">Cancel</button>
+        <button class="sub-btn">Submit</button>
+       </div>
+    </div>
+</section>

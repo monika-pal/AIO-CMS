@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import { AddnewComponent } from 'src/app/pages/user/create/addnew.component';
+
+
 
 @Component({
   selector: 'app-sidebar',
@@ -9,14 +9,10 @@ import { AddnewComponent } from 'src/app/pages/user/create/addnew.component';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  openDialog() {
-    const dialogRef = this.dialog.open(AddnewComponent, {
-      width: '455px',
-    });
-  }
+
 
 }

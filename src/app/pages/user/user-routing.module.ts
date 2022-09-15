@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddnewComponent } from './create/addnew.component';
+import { AddnewComponent } from './create-addNew-dialog/addnew.component';
 
 import { ListComponent } from './list/list.component';
 

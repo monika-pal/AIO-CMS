@@ -1,5 +1,22 @@
 
-
+.sec-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .add-new-btn{
+        .add-new{
+            background-color: #D9232D;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            i{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
 ::ng-deep{
     .mat-table{
         // min-width: 100%;

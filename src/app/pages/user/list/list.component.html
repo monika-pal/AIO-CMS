@@ -1,8 +1,13 @@
 <section class="sec-btn">
-    <div>
+    <div class="btn-sec">
       <button mat-flat-button class="mog3_primary_flat_btn">All User (130)</button>
       <button mat-flat-button class="mog3_white_flat_btn">Active (110)</button>
       <button mat-flat-button class="mog3_white_flat_btn">Inactive (20)</button>
+    </div>
+    <div class="add-new-btn">
+      <button mat-flat-button (click)="openDialog()" class="add-new"><span><i class="ri-add-line"></i></span>
+        Add New User
+      </button>
     </div>
   </section>
   <section class="head-table">
