@@ -1,182 +1,283 @@
-<section class="create-sec">
-    <div class="edit-text-sec">
-        <ul class="icon-edit">
-            <li>
-                <span><i class="ri-arrow-go-back-line"></i></span>
-                <p>Undo</p>
-            </li>
-            <li>
-                <span><i class="ri-arrow-go-forward-line"></i></span>
-                <p>Redo</p>
-            </li>
-            <li>
-                <span><i class="ri-paragraph"></i></span>
-                <p>Paragraph</p>
-            </li>
-            <li>
-                <span><i class="ri-double-quotes-l"></i></span>
-                <p>Quote</p>
-            </li>
-            <li>
-                <span><i class="ri-image-fill"></i></span>
-                <p>Image</p>
-            </li>
-            <li>
-                <span><i class="ri-heading"></i></span>
-                <p>Heading</p>
-            </li>
-            <li>
-                <span><i class="ri-image-add-fill"></i></span>
-                <p>Cover</p>
-            </li>
-            <li>
-                <span><i class="ri-gallery-fill"></i></span>
-                <p>Gallery</p>
-            </li>
-            <li>
-                <span><i class="ri-list-check"></i></span>
-                <p>List</p>
-            </li>
-            <li>
-                <span><i class="ri-music-fill"></i></span>
-                <p>Audio</p>
-            </li>
-            <li>
-                <span><i class="ri-folder-line"></i></span>
-                <p>File</p>
-            </li>
-        </ul>
-    </div>
-        <div class="create-sec-btn">
-        <button mat-flat-button class="primary_btn">SAVE AS DRAFT</button>
-          <button mat-flat-button class="mog3_primary_flat_btn">PREVIEW</button>
-          <button mat-flat-button class="red_flat_btn">PUBLISH</button>
-         
+<section>
+    <div class="container-sm container-lg">
+        <div class="create-sec col-sm-12">
+            <div class="edit-text-sec">
+                <ul class="icon-edit">
+                    <li>
+                        <span><i class="ri-arrow-go-back-line"></i></span>
+                        <p>Undo</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-arrow-go-forward-line"></i></span>
+                        <p>Redo</p>
+                    </li>
+                    <!-- <li>
+                        <span><i class="ri-paragraph"></i></span>
+                        <p>Paragraph</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <p>Quote</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-image-fill"></i></span>
+                        <p>Image</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-heading"></i></span>
+                        <p>Heading</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-image-add-fill"></i></span>
+                        <p>Cover</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-gallery-fill"></i></span>
+                        <p>Gallery</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-list-check"></i></span>
+                        <p>List</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-music-fill"></i></span>
+                        <p>Audio</p>
+                    </li>
+                    <li>
+                        <span><i class="ri-folder-line"></i></span>
+                        <p>File</p>
+                    </li> -->
+                </ul>
+            </div>
+                <div class="create-sec-btn">
+                <button mat-flat-button class="primary_btn">SAVE AS DRAFT</button>
+                  <button mat-flat-button class="mog3_primary_flat_btn">PREVIEW</button>
+                  <button mat-flat-button class="red_flat_btn">PUBLISH</button>
+                 
+                </div>
         </div>
+    </div>
 </section>
 <section class="form-input">
     <div class="form-wrapper">
-        <div class="inner-form-box">
-            <div class="title-box">
-                <h3>Title</h3>
-                <form class="title-form">
-                    <textarea matInput id="w3review" name="w3review">Add Title</textarea>
-                  </form>
-            </div>
-            <div class="edit-sec">
-                <div class="edit-box">
-                    <angular-editor id="editor1" formControlName="htmlContent1">
-                        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
-                          <ae-toolbar-set>
-                            <ae-button iconClass="fa fa-html5" title="Angular editor logo">
-                            </ae-button>
-                          </ae-toolbar-set>
-                        </ng-template>
-                      </angular-editor>
+        <div class="row">
+            <div class="col-lg-7 col-lg-9">
+                <div class="inner-form-box">
+                    <div class="title-box">
+                        <h3>Title</h3>
+                        <form class="title-form">
+                            <textarea id="w3review" name="w3review">Add Title</textarea>
+                          </form>
+                    </div>
+                    <div class="edit-sec">
+                        <div class="edit-box">
+                            <angular-editor id="editor1" formControlName="htmlContent1">
+                                <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+                                  <ae-toolbar-set>
+                                    <ae-button iconClass="fa fa-html5" title="Angular editor logo">
+                                    </ae-button>
+                                  </ae-toolbar-set>
+                                </ng-template>
+                              </angular-editor>
+                        </div>
+                        <div class="toggle-btn">
+                            <div class="up-down-btn">
+                                <ul>
+                                    <li><i class="ri-arrow-up-s-line"></i></li>
+                                    <li><i class="ri-grid-fill"></i></li>
+                                    <li><i class="ri-arrow-down-s-line"></i></li>
+                                </ul>
+                            </div>
+                            <div class="dlt-btn">
+                               <span><i class="ri-delete-bin-5-fill"></i></span>
+                            </div>
+                        </div>
+                        <div class="media-upload-sec" style="display: none;">
+                            <div class="file-upload">
+                              <div class="image-upload-wrap">
+                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                <div class="drag-text">
+                                  <p><span><i class="ri-gallery-fill"></i></span>Gallery</p> 
+                                  <p class="mt-15">Drag images, upload new ones or select files from your library.</p>
+                                </div>
+                                <div class="btn-upld">
+                                  <button class="file-upload-btn" type="button">Upload</button>
+                                  <button class="file-media-btn mr-10" type="button">Media Library</button>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                        <div class="add-editor">
+                            <p>
+                                <button mat-button [matMenuTriggerFor]="menu"><span><i class="ri-add-circle-fill"></i></span></button>
+                                Start writing your post here. Add images, video, #Hashtags and more.
+                            </p>
+                            <div class="edit-menu">
+                                <mat-menu #menu="matMenu">
+                                    <div class="editor-div">
+                                        <ul>
+                                            <li>
+                                                <span><i class="ri-paragraph"></i></span>
+                                                <p>Paragraph</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-double-quotes-l"></i></span>
+                                                <p>Quote</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-image-fill"></i></span>
+                                                <p>Image</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-heading"></i></span>
+                                                <p>Heading</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-image-add-fill"></i></span>
+                                                <p>Cover</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-gallery-fill"></i></span>
+                                                <p>Gallery</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-list-check"></i></span>
+                                                <p>List</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-music-fill"></i></span>
+                                                <p>Audio</p>
+                                            </li>
+                                            <li>
+                                                <span><i class="ri-folder-line"></i></span>
+                                                <p>File</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                  </mat-menu>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="media-upload-sec">
-                  <div class="file-upload">
-                    <div class="image-upload-wrap">
-                      <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                      <div class="drag-text">
-                        <p><span><i class="ri-gallery-fill"></i></span>Gallery</p> 
-                        <p class="mt-15">Drag images, upload new ones or select files from your library.</p>
-                      </div>
-                      <div class="btn-upld">
-                        <button class="file-upload-btn" type="button">Upload</button>
-                        <button class="file-media-btn mr-10" type="button">Media Library</button>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    
-        <div class="tab-sec">
-            <mat-tab-group preserveContent>
-                <mat-tab label="Document">
-                    <mat-accordion>
-                        <mat-expansion-panel (opened)="panelOpenState = true"
-                                        (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Status Visibility
-                    </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <div class="content-text">
-                    <p>Publish On</p>
-                    <a>Immediately</a>
-                     </div>
-                     <div class="date-time">
-                        <div class="time-box">
-                            <div class="ngx-timepicker-field-example">
-                                <ngx-timepicker-field [format]="24" [defaultTime]="'23:11'"></ngx-timepicker-field>
-                            </div>
-                           </div>
-                           <mat-form-field class="example-full-width" appearance="fill">
-                            <a (click)="picker.open()">
-                            <input matInput [matDatepicker]="picker" placeholder="Select Date"> 
-                            <mat-datepicker #picker></mat-datepicker>
-                           </a> 
-                            </mat-form-field>
-                     </div>
-                      </mat-expansion-panel>
-                        <mat-expansion-panel (opened)="panelOpenState = true"
-                        (closed)="panelOpenState = false">
-                                <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Category List
-                                </mat-panel-title>
-                                </mat-expansion-panel-header>
-                                <div class="content-text">
+            <div class="col-lg-5 col-lg-3">
+                <div class="tab-sec">
+                    <mat-tab-group preserveContent>
+                        <mat-tab label="Document">
+                            <mat-accordion>
+                                <mat-expansion-panel (opened)="panelOpenState = true"
+                                                (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Status Visibility
+                            </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="content-text">
+                            <p>Publish On</p>
+                             </div>
+                             <div class="date-box">
+                                <div class="form-publish">
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Select Date</mat-label>
+                                        <input class="date" type="date" matInput name="week" min="09:00" max="18:00">
+                                     </mat-form-field>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Select Time</mat-label>
+                                        <input class="time" type="time" matInput name="week" min="09:00" max="18:00">
+                                     </mat-form-field>
                                 </div>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-                            <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Add Tab
-                            </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div class="content-text">
-                            </div>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-                            <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Featured Image
-                            </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div class="content-text">
-                            </div>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-                            <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Excerpt
-                            </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div class="content-text">
-                            </div>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-                            <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Subtitle
-                            </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div class="content-text">
-                            </div>
-                            </mat-expansion-panel>
-                      </mat-accordion>
-                </mat-tab>
-                <mat-tab label="Block">
-                  block
-                </mat-tab>
-            </mat-tab-group>
+                             </div>
+                              </mat-expansion-panel>
+                                <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+                                        <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            Category List
+                                        </mat-panel-title>
+                                        </mat-expansion-panel-header>
+                                        <div class="category-btn">
+                                            <button class="primary">Add New Category</button>
+                                        </div>
+                                        <div class="content-text mt-10">
+                                            <div class="search-box">
+                                                <form class="search-form">  
+                                                    <div class="inner-form">
+                                                      <i class="ri-search-line"></i>
+                                                      <input type="search" placeholder="Search" id="site-search" name="q">
+                                                      <button class="search-btn">Search Post</button>
+                                                    </div>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                        <div class="multiselect-box mt-30">
+                                            <section class="example-section">
+                                                <p><mat-checkbox formControlName="ArtificialIntelligence">Artificial Intelligence</mat-checkbox></p>
+                                                <p><mat-checkbox formControlName="Ecommerce">B2B E-commerce</mat-checkbox></p>
+                                                <div class="casestudy-box">
+                                                    <p><mat-checkbox formControlName="CaseStudy">Case Study</mat-checkbox></p>
+                                                    <ul>
+                                                        <li>
+                                                            <p><mat-checkbox formControlName="Automotive">Automotive</mat-checkbox></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><mat-checkbox formControlName="Aviation">Aviation</mat-checkbox></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><mat-checkbox formControlName="Cement">Cement</mat-checkbox></p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                              </section>
+                                        </div>
+                                    </mat-expansion-panel>
+                                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Add Tab
+                                    </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="content-text">
+                                    </div>
+                                    </mat-expansion-panel>
+                                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Featured Image
+                                    </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="content-text">
+                                    </div>
+                                    </mat-expansion-panel>
+                                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Excerpt
+                                    </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="content-text">
+                                    </div>
+                                    </mat-expansion-panel>
+                                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Subtitle
+                                    </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="content-text">
+                                    </div>
+                                    </mat-expansion-panel>
+                              </mat-accordion>
+                        </mat-tab>
+                        <mat-tab label="Block">
+                          block
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
         </div>
     </div>
 </section>

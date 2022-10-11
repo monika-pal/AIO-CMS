@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import {FormBuilder} from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
+
+
 
 
 @Component({
@@ -9,17 +13,25 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 })
 export class CreateComponent implements OnInit {
   panelOpenState = false;
-  private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+  title = 'demo';
+  exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
 
   onChangeHour(event: any) {
     console.log('event', event);
   }
-  constructor() { }
+
+  toppings = this._formBuilder.group({
+    ArtificialIntelligence: false,
+    Ecommerce: false,
+    CaseStudy: false,
+  });
+  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog) { }
 
   ngOnInit(): void {
   
   }
 
- 
+  
+
 }
 

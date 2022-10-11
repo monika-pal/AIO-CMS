@@ -12,7 +12,9 @@ import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
+
+
 
 
 
@@ -34,9 +36,8 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     AngularEditorModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxMaterialTimepickerModule,
- 
-    
+   
   ]
+ 
 })
 export class BlogModule { }
