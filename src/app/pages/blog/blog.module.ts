@@ -5,13 +5,16 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { MaterialModule } from '../../material.module';
 import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import { CategoryDialogComponent } from './category-dialog/category-dialog.component';
+import { RelatedDialogComponent } from './related-dialog/related-dialog.component';
+
 
 
 
@@ -23,21 +26,22 @@ import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     ListComponent,
-    CreateComponent
+    CreateComponent,
+    CategoryDialogComponent,
+    RelatedDialogComponent
   ],
   imports: [
     CommonModule,
     BlogRoutingModule,
     MaterialModule,
-    MatTabsModule,
-    MatExpansionModule,
-    MatPaginatorModule,
     HttpClientModule, 
     AngularEditorModule,
-    MatDatepickerModule,
     MatNativeDateModule,
-   
-  ]
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
  
 })
 export class BlogModule { }

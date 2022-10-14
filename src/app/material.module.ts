@@ -2,15 +2,12 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
@@ -21,6 +18,10 @@ import { MatListModule } from '@angular/material/list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -48,7 +49,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
         MatListModule,
         MatDatepickerModule,
         MatTabsModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatChipsModule,
+        MatExpansionModule,
+        MatPaginatorModule,
         
     ],
     exports: [
@@ -73,7 +77,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
         MatListModule,
         MatDatepickerModule,
         MatTabsModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatChipsModule,
+        MatExpansionModule,
+        MatPaginatorModule
+
         
     ]
 })

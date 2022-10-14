@@ -1,0 +1,63 @@
+<section class="category">
+    <div class="container-sm container-lg container-xl">
+        <h2>Add New Category</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-category">
+                    <h4>Name</h4>
+                    <input placeholder="Add Category Name" type="text">
+                    <p>The name is how it appears on your site.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-category">
+                    <h4>Slug</h4>
+                    <input type="text">
+                    <p>The “slug” is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-category">
+                    <h4>Parent Category</h4>
+                    <mat-form-field appearance="outline">
+                        <mat-label>All Categories</mat-label>
+                        <mat-select>
+                          <mat-option value="one">First option</mat-option>
+                          <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <p>Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have children categories for Bebop and Big Band. Totally optional.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-category">
+                    <h4>Description</h4>
+                    <textarea></textarea>
+                    <p>The description is not prominent by default; however, some themes may show it.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-category">
+                    <div class="text-link">
+                        <h4>Custom Param Link</h4>
+                        <span class="ml-2">https://business.moglix.com</span>
+                    </div>
+                    <input placeholder="" type="text"> 
+                    <p>Leave blank to disable</p>
+                </div>
+            </div>
+            <div class="col-md-6 category-btn">
+                <div class="form-category">
+                    <div class="btn-form">
+                        <button class="cancel">Cancel</button>
+                        <button class="save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

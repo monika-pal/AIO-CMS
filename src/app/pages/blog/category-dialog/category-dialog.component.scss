@@ -1,0 +1,95 @@
+// dialog css
+
+.category{
+    h2{
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      font-weight: bold;  
+      color: #363636;
+    }
+    .form-category{
+        h4{
+            font-size: 16px;
+            line-height: 24px;
+            text-align: left;
+            color: #212529;
+            font-weight: 500;
+        }
+    
+        .ml-2{
+            margin-left: 50px;
+            font-size: 10px;
+            line-height: 24px;
+            color: #212529;
+            font-weight: 500;
+        }
+
+        input{
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+        }
+    
+        p{
+          font-size: 10px;
+          line-height: 14px;
+          color:#989898;  
+          font-weight: normal;
+          margin-top: 10px;
+        }
+
+        textarea{
+            width: 100%;
+            height: 100%;
+            min-height: 57px;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+        }
+
+        .text-link{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .mat-form-field{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .category-btn{
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+
+        .cancel{
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #FFFFFF;
+            color: #363636;
+            border: 1px solid #363636;
+            border-radius: 4px;
+            margin-right: 20px;
+            width: 110px;
+            height: 34px;
+            display: inline-block;
+        }
+        .save{
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #D9232D;
+            color: #fff;
+            border: 1px solid #D9232D;
+            border-radius: 4px; 
+            width: 110px;
+            height: 34px;
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+<section class="category">
+    <div class="container-sm container-lg container-xl">
+      <h2>Add New Tag</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-category">
+                    <h4>Name</h4>
+                    <input placeholder="Add Category Name" type="text">
+                    <p>The name is how it appears on your site.</p>
+                </div>
+                <div class="form-category">
+                    <h4>Slug</h4>
+                    <input type="text">
+                    <p>The “slug” is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.</p>
+                </div>
+                <div class="form-category">
+                    <h4>Parent Category</h4>
+                    <mat-form-field appearance="outline">
+                        <mat-label>All Categories</mat-label>
+                        <mat-select>
+                          <mat-option value="one">First option</mat-option>
+                          <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <p>Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have children categories for Bebop and Big Band. Totally optional.</p>
+                </div>
+                <div class="form-category">
+                    <h4>Description</h4>
+                    <textarea></textarea>
+                    <p>The description is not prominent by default; however, some themes may show it.</p>
+                </div>
+                <div class="form-category">
+                    <div class="text-link">
+                        <h4>Custom Param Link</h4>
+                        <span class="ml-2">https://business.moglix.com</span>
+                    </div>
+                    <input placeholder="" type="text"> 
+                    <p>Leave blank to disable</p>
+                </div>
+                <div class="form-category">
+                    <div class="btn-form">
+                        <button class="save">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="table-top-sec">
+                    <div class="search-box">
+                        <form class="search-form">  
+                            <div class="inner-form">
+                              <i class="ri-search-line"></i>
+                              <input type="search" placeholder="Search" id="site-search" name="q">
+                              <button class="search-btn">Search Post</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="trash-btn">
+                        <button class="save">Move to Trash</button>
+                      </div>
+                </div>
+                <div class="table-category">
+                      <section class="mog3_msnsearchtable" tabindex="0">
+                          <table mat-table [dataSource]="dataSource">     
+                              <ng-container matColumnDef="select" sticky>
+                                  <th mat-header-cell *matHeaderCellDef>
+                                  <mat-checkbox (change)="$event ? masterToggle() : null"
+                                                  [checked]="selection.hasValue() && isAllSelected()"
+                                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                                  [aria-label]="checkboxLabel()">
+                                  </mat-checkbox>
+                                  </th>
+                                  <td mat-cell *matCellDef="let row">
+                                  <mat-checkbox (click)="$event.stopPropagation()"
+                                                  (change)="$event ? selection.toggle(row) : null"
+                                                  [checked]="selection.isSelected(row)"
+                                                  [aria-label]="checkboxLabel(row)">
+                                  </mat-checkbox>
+                                  </td>      
+                              </ng-container>               
+                            
+                            <ng-container matColumnDef="Name">
+                              <th mat-header-cell *matHeaderCellDef>Name</th>
+                              <td mat-cell *matCellDef="let element"> 
+                                  {{element?.Name}}
+                              </td>
+                            </ng-container>    
+                            
+                            <ng-container matColumnDef="Description">
+                              <th mat-header-cell *matHeaderCellDef>Description</th>
+                              <td mat-cell *matCellDef="let element"> 
+                                 {{element?.Description}}
+                               </td>
+                            </ng-container>
+                        
+                           
+                            <ng-container matColumnDef="Slug">
+                              <th mat-header-cell *matHeaderCellDef>Slug</th>
+                              <td mat-cell *matCellDef="let element">{{element?.Slug}}</td>
+                            </ng-container>
+                            
+                            <ng-container matColumnDef="Count">
+                              <th mat-header-cell *matHeaderCellDef>Count</th>
+                              <td mat-cell *matCellDef="let element">{{element?.Count}}</td>
+                            </ng-container>
+                        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                          </table>
+                          
+                        </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

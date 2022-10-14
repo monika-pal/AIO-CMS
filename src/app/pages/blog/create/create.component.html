@@ -92,7 +92,7 @@
                                <span><i class="ri-delete-bin-5-fill"></i></span>
                             </div>
                         </div>
-                        <div class="media-upload-sec" style="display: none;">
+                        <div class="media-upload-sec">
                             <div class="file-upload">
                               <div class="image-upload-wrap">
                                 <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
@@ -196,7 +196,7 @@
                                         </mat-panel-title>
                                         </mat-expansion-panel-header>
                                         <div class="category-btn">
-                                            <button class="primary">Add New Category</button>
+                                            <button mat-button (click)="openDialog()" class="primary">Add New Category</button>
                                         </div>
                                         <div class="content-text mt-10">
                                             <div class="search-box">
@@ -234,10 +234,29 @@
                                     (closed)="panelOpenState = false">
                                     <mat-expansion-panel-header>
                                     <mat-panel-title>
-                                        Add Tab
+                                        Add Tag
                                     </mat-panel-title>
                                     </mat-expansion-panel-header>
-                                    <div class="content-text">
+                                    <div class="conten-tag">
+                                        <div class="form-tag">
+                                            <h4>Add New Tag</h4>
+                                            <mat-form-field class="example-chip-list" appearance="outline">
+                                                <mat-label>Add New Tag</mat-label>
+                                                <mat-chip-list #chipList aria-label="Fruit selection">
+                                                  <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+                                                    {{fruit.name}}
+                                                    <button matChipRemove>
+                                                      <mat-icon>cancel</mat-icon>
+                                                    </button>
+                                                  </mat-chip>
+                                                  <input [matChipInputFor]="chipList"
+                                                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                                         [matChipInputAddOnBlur]="addOnBlur"
+                                                         (matChipInputTokenEnd)="add($event)">
+                                                </mat-chip-list>
+                                              </mat-form-field>     
+                                              <p>Separate with commas or the Enter key.</p>
+                                        </div>
                                     </div>
                                     </mat-expansion-panel>
                                     <mat-expansion-panel (opened)="panelOpenState = true"
@@ -247,7 +266,10 @@
                                         Featured Image
                                     </mat-panel-title>
                                     </mat-expansion-panel-header>
-                                    <div class="content-text">
+                                    <div class="content-featured">
+                                        <form action="upload.php" method="POST">
+                                            <input type="file" multiple>
+                                          </form>
                                     </div>
                                     </mat-expansion-panel>
                                     <mat-expansion-panel (opened)="panelOpenState = true"
@@ -257,7 +279,12 @@
                                         Excerpt
                                     </mat-panel-title>
                                     </mat-expansion-panel-header>
-                                    <div class="content-text">
+                                    <div class="content-excerpt">
+                                        <p>Write an excerpt (optional)</p>
+                                        <form>
+                                            <textarea matInput></textarea>
+                                        </form>
+                                          <a href="#" target="_blank">Learn more about manual excerpts</a>
                                     </div>
                                     </mat-expansion-panel>
                                     <mat-expansion-panel (opened)="panelOpenState = true"
@@ -267,7 +294,32 @@
                                         Subtitle
                                     </mat-panel-title>
                                     </mat-expansion-panel-header>
-                                    <div class="content-text">
+                                    <div class="content-subtitle">
+                                        <form>
+                                            <textarea placeholder="Enter Subtitle here" matInput></textarea>
+                                        </form>
+                                    </div>
+                                    </mat-expansion-panel>
+                                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Related Post
+                                    </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div class="content-post">
+                                     <div class="btn-post">
+                                        <p>Add Minimum 3 Related Posts</p>
+                                        <span><button class="modify" mat-button disabled>Modify</button></span>
+                                     </div>
+                                     <span><button class="related-btn" mat-button (click)="openDialog2()" color="primary">Add Related Post</button></span>
+                                    </div>
+                                    <div class="list-related">
+                                        <ul>
+                                            <li><p>5 Reason to wake up at 5AM</p></li>
+                                            <li><p>Redefining Procurement: Everything you need to know in 3 steps</p></li>
+                                            <li><p>Redefining Procurement: Everything you need to know in 3 steps</p></li>
+                                        </ul>
                                     </div>
                                     </mat-expansion-panel>
                               </mat-accordion>
